@@ -48,12 +48,11 @@ sudo snap install shadowsocks-libev --edge
 ### Distribution-specific guide
 
 - [Debian & Ubuntu](#debian--ubuntu)
-    + [Install from repository](#install-from-repository)
+    + [Install from repository](#install-from-repository-not-recommended)
     + [Build deb package from source](#build-deb-package-from-source)
     + [Configure and start the service](#configure-and-start-the-service)
 - [Fedora & RHEL](#fedora--rhel)
     + [Build from source with centos](#build-from-source-with-centos)
-    + [Install from repository](#install-from-repository-1)
 - [Archlinux & Manjaro](#archlinux--manjaro)
 - [NixOS](#nixos)
 - [Nix](#nix)
@@ -164,37 +163,12 @@ Supported distributions:
 
 #### Build from source with centos
 
-If you are using CentOS 7, you need to install these prequirement to build from source code:
+If you are using CentOS 7, you need to install these prerequirements to build from source code:
 
 ```bash
 yum install epel-release -y
 yum install gcc gettext autoconf libtool automake make pcre-devel asciidoc xmlto c-ares-devel libev-devel libsodium-devel mbedtls-devel -y
 ```
-
-#### Install from repository
-
-Enable repo via `dnf`:
-
-```
-su -c 'dnf copr enable librehat/shadowsocks'
-```
-
-Or download yum repo on [Fedora Copr](https://copr.fedoraproject.org/coprs/librehat/shadowsocks/) and put it inside `/etc/yum.repos.d/`. The release `Epel` is for RHEL and its derivatives.
-
-Then, install `shadowsocks-libev` via `dnf`:
-
-```bash
-su -c 'dnf update'
-su -c 'dnf install shadowsocks-libev'
-```
-
-or `yum`:
-
-```bash
-su -c 'yum update'
-su -c 'yum install shadowsocks-libev'
-```
-The repository is maintained by [@librehat](https://github.com/librehat), any issues, please report [here](https://github.com/librehat/shadowsocks-libev/issues)
 
 ### Archlinux & Manjaro
 
